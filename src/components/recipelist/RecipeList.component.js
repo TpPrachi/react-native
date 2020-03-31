@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, SafeAreaView, FlatList, Text, ListItem } from 'react-native';
 import styles from './RecipeList.component.style';
-import RecipeItem from './RecipeItem.component'
+import RecipeItem from './RecipeItem.component';
 
 
 
@@ -74,5 +74,4 @@ export default class RecipeList extends Component {
       </SafeAreaView>
     );
   }
-
 }

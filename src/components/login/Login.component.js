@@ -12,29 +12,52 @@ export default class Login extends Component {
 
   render() {
     return (
-      <View style={styles.inputContainer}>
-        <TextInput
-          style={styles.input}
+      <View style={styles.container}>
+      <Text style={styles.logo}>Recipe App</Text>
+      <View style={styles.inputView} >
+        <TextInput  
+          style={styles.inputText}
           placeholder="Email"
           defaultValue={this.state.email}
           onChangeText={(email) => this.setState({ email })}
-          value={this.state.text}
-        />
-        <TextInput
-          style={styles.input}
+          value={this.state.text}/>
+      </View>
+      <View style={styles.inputView} >
+        <TextInput  
+          secureTextEntry
+          style={styles.inputText}
           placeholder="Password"
           defaultValue={this.state.password}
           onChangeText={(password) => this.setState({ password })}
-          value={this.state.text}
-        />
-        <TouchableOpacity
-          style={styles.loginScreenButton}
-          onPress={() => this._doLogin()}
-          underlayColor='#fff'>
-          <Text style={styles.loginText}>Login</Text>
-        </TouchableOpacity>
-
+          value={this.state.text}/>
       </View>
+      <TouchableOpacity style={styles.loginBtn} onPress={() => this._doLogin()}>
+        <Text style={styles.loginText}>LOGIN</Text>
+      </TouchableOpacity>
+    </View>
+      // <View style={styles.inputContainer}>
+        // <TextInput
+        //   style={styles.input}
+        //   placeholder="Email"
+        //   defaultValue={this.state.email}
+        //   onChangeText={(email) => this.setState({ email })}
+        //   value={this.state.text}
+        // />
+        // <TextInput
+        //   style={styles.input}
+        //   placeholder="Password"
+        //   defaultValue={this.state.password}
+        //   onChangeText={(password) => this.setState({ password })}
+        //   value={this.state.text}
+        // />
+        // <TouchableOpacity
+        //   style={styles.loginScreenButton}
+        //   onPress={() => this._doLogin()}
+        //   underlayColor='#fff'>
+        //   <Text style={styles.loginText}>Login</Text>
+        // </TouchableOpacity>
+
+      // </View>
     );
   }
 

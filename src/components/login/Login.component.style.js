@@ -1,38 +1,46 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-  inputContainer: {
-    padding: 12,
+  container: {
+    flex: 1,
+    backgroundColor: '#003f5c',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  input: {
-    borderWidth: 0.5,  // size/width of the border
-    borderColor: 'black',  // color of the border
-    borderRadius: 4,
-    paddingLeft: 10,
-    height: 50,
-    margin: 12
+  logo:{
+    fontWeight:"bold",
+    fontSize:50,
+    color:"#fb5b5a",
+    marginBottom:40
   },
-  button: {
-    margin: 12,
-    backgroundColor: 'green',
-    padding: 50
+  inputView:{
+    width:"80%",
+    backgroundColor:"#465881",
+    borderRadius:25,
+    height:50,
+    marginBottom:20,
+    justifyContent:"center",
+    padding:20
   },
-
-  loginScreenButton: {
-    marginRight: 10,
-    marginLeft: 10,
-    marginTop: 30,
-    paddingTop: 10,
-    paddingBottom: 10,
-    backgroundColor: '#000000',
-    borderRadius: 4,
-    borderWidth: 1,
-    borderColor: '#fff'
+  inputText:{
+    height:50,
+    color:"white"
   },
-  loginText: {
-    color: '#fff',
-    textAlign: 'center',
-    paddingLeft: 10,
-    paddingRight: 10
+  forgot:{
+    color:"white",
+    fontSize:11
+  },
+  loginBtn:{
+    width:"80%",
+    backgroundColor:"#fb5b5a",
+    borderRadius:25,
+    height:50,
+    alignItems:"center",
+    justifyContent:"center",
+    marginTop:40,
+    marginBottom:10
+  },
+  loginText:{
+    color:"white"
   }
 });
