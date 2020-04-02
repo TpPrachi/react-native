@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { TextInput, View, Text, TouchableOpacity, Alert } from 'react-native';
+import { TextInput, View, Text, TouchableOpacity, Alert, 
+  Image, ImageBackground, ScrollView } from 'react-native';
+import { OutlinedTextField } from 'react-native-material-textfield';
 import styles from './Login.component.style';
 
 
@@ -9,55 +11,51 @@ export default class Login extends Component {
     this.state = { email: 'jm1@example.com', password: 'jay@123' };
   }
 
-
   render() {
     return (
-      <View style={styles.container}>
-      <Text style={styles.logo}>Recipe App</Text>
-      <View style={styles.inputView} >
-        <TextInput  
-          style={styles.inputText}
-          placeholder="Email"
-          defaultValue={this.state.email}
-          onChangeText={(email) => this.setState({ email })}
-          value={this.state.text}/>
-      </View>
-      <View style={styles.inputView} >
-        <TextInput  
-          secureTextEntry
-          style={styles.inputText}
-          placeholder="Password"
-          defaultValue={this.state.password}
-          onChangeText={(password) => this.setState({ password })}
-          value={this.state.text}/>
-      </View>
-      <TouchableOpacity style={styles.loginBtn} onPress={() => this._doLogin()}>
-        <Text style={styles.loginText}>LOGIN</Text>
-      </TouchableOpacity>
-    </View>
-      // <View style={styles.inputContainer}>
-        // <TextInput
-        //   style={styles.input}
-        //   placeholder="Email"
-        //   defaultValue={this.state.email}
-        //   onChangeText={(email) => this.setState({ email })}
-        //   value={this.state.text}
-        // />
-        // <TextInput
-        //   style={styles.input}
-        //   placeholder="Password"
-        //   defaultValue={this.state.password}
-        //   onChangeText={(password) => this.setState({ password })}
-        //   value={this.state.text}
-        // />
-        // <TouchableOpacity
-        //   style={styles.loginScreenButton}
-        //   onPress={() => this._doLogin()}
-        //   underlayColor='#fff'>
-        //   <Text style={styles.loginText}>Login</Text>
-        // </TouchableOpacity>
-
-      // </View>
+    <ImageBackground source={require('../../../assets/recipibackground.jpeg')} style={{
+      width: '100%',
+      height: '100%',
+      flex: 1,
+    }} resizeMode="cover">
+      <ScrollView style={styles.scrollContainer}>
+        <View style={styles.container}>
+          <View style={styles.centerContainer}>
+            <Image
+              source={require('../../../assets/cooking.jpeg')}
+              style={styles.imageContainer}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.outLinedTextField}>
+            <OutlinedTextField
+              label='Email'
+              keyboardType='email-address'
+              returnKeyType={"next"}
+              tintColor='#000000'
+              value={this.state.text}
+              defaultValue={this.state.email}
+              onChangeText={(email) => this.setState({ email })}
+            />
+          </View>
+          <View style={styles.outLinedTextField}>
+            <OutlinedTextField
+              label='Password'
+              secureTextEntry={true}
+              tintColor='#000000'
+              value={this.state.text}
+              defaultValue={this.state.password}
+              onChangeText={(password) => this.setState({ password })}
+            />
+          </View>
+          <View style={styles.centerContainer}>
+            <TouchableOpacity style={styles.touchableButton} onPress={() => this._doLogin()}>
+              <Text style={{ color: 'white' }}>LOG IN</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </ScrollView>
+    </ImageBackground>
     );
   }
 

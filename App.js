@@ -5,7 +5,6 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import RecipeDetail from './src/components/recipedetail/RecipeDetail.component';
 import RecipeItem from './src/components/recipelist/RecipeItem.component';
-import SplashScreen from 'react-native-splash-screen';
 
 
 
