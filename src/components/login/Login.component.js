@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { TextInput, View, Text, TouchableOpacity, Alert, 
+import { View, Text, TouchableOpacity, Alert, 
   Image, ImageBackground, ScrollView } from 'react-native';
 import { OutlinedTextField } from 'react-native-material-textfield';
+import { TextInput } from 'react-native-paper';
 import styles from './Login.component.style';
 
 

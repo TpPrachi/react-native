@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, SafeAreaView, FlatList, Text, ListItem } from 'react-native';
+import { View, SafeAreaView, FlatList, Text, ImageBackground } from 'react-native';
 import styles from './RecipeList.component.style';
 import RecipeItem from './RecipeItem.component';
 
@@ -69,7 +69,7 @@ export default class RecipeList extends Component {
         <FlatList
           data={this.state.data}
           renderItem={this.renderItem}
-          keyExtractor={item => item.id}
+          keyExtractor={item => item.recipeId}
         />
       </SafeAreaView>
     );
